@@ -1,1 +1,34 @@
-<header></header>
+<header>
+  <nz-layout>
+    <nz-header>
+      <div class="logo"><i nz-icon nzType="appstore" nzTheme="outline"></i> Digituz</div>
+      <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
+        <li nz-menu-item nzSelected>nav 1</li>
+        <li nz-menu-item>nav 2</li>
+        <li nz-menu-item>nav 3</li>
+      </ul>
+    </nz-header>
+    <nz-layout>
+      <nz-sider nzWidth="200px" nzTheme="light">
+        <ul nz-menu nzMode="inline" class="sider-menu">
+          <li><i nz-icon nzType="appstore" nzTheme="outline"></i> Produtos</li>
+        </ul>
+      </nz-sider>
+      <nz-layout class="inner-layout">
+        <nz-breadcrumb>
+          <nz-breadcrumb-item>
+            <a [title]="'Início'" [routerLink]="['/']">
+              Início
+            </a>
+          </nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+            <a [title]="'Produtos'" [routerLink]="['/produtos']">
+              Produtos
+            </a>
+          </nz-breadcrumb-item>
+        </nz-breadcrumb>
+        <nz-content>Content</nz-content>
+      </nz-layout>
+    </nz-layout>
+  </nz-layout>
+</header>
