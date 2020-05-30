@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-product-form',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-form.component.scss'],
 })
 export class ProductFormComponent implements OnInit {
-  productActive: boolean = false;
-  productDetails: string = '';
+  formFields = this.fb.group({
+    sku: [''],
+    title: [''],
+    description: [''],
+    productDetails: [''],
+    sellingPrice: [null],
+    isActive: [false],
+  });
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.formFields.value);
+  }
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
@@ -17,7 +17,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 @NgModule({
   declarations: [ProductsComponent, ProductFormComponent, ProductsListComponent],
   imports: [
-    FormsModule,
+    ReactiveFormsModule,
     NzCardModule,
     NzDividerModule,
     NzFormModule,
