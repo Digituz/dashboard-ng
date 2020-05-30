@@ -26,7 +26,6 @@ export class BreadcrumbsComponent implements OnInit {
 
   private createBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: Breadcrumb[] = []): Breadcrumb[] {
     // if no routeConfig is avalailable we are on the root path
-    debugger;
     let label = route.routeConfig && route.routeConfig.data ? route.routeConfig.data.breadcrumb : '';
     let path = route.routeConfig && route.routeConfig.data ? route.routeConfig.path : '';
 
