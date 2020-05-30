@@ -11,22 +11,18 @@
     <nz-layout>
       <nz-sider nzWidth="200px" nzTheme="light">
         <ul nz-menu nzMode="inline" class="sider-menu">
-          <li><i nz-icon nzType="appstore" nzTheme="outline"></i> Produtos</li>
+          <li>
+            <a [title]="'Início'" routerLink="/home"> <i nz-icon nzType="appstore" nzTheme="outline"></i> Início </a>
+          </li>
+          <li>
+            <a [title]="'Produtos'" routerLink="/products">
+              <i nz-icon nzType="appstore" nzTheme="outline"></i> Produtos
+            </a>
+          </li>
         </ul>
       </nz-sider>
       <nz-layout class="inner-layout">
-        <nz-breadcrumb>
-          <nz-breadcrumb-item>
-            <a [title]="'Início'" routerLink="/">
-              Início
-            </a>
-          </nz-breadcrumb-item>
-          <nz-breadcrumb-item>
-            <a [title]="'Produtos'" routerLink="/products">
-              Produtos
-            </a>
-          </nz-breadcrumb-item>
-        </nz-breadcrumb>
+        <app-breadcrumbs></app-breadcrumbs>
         <nz-content>
           <router-outlet></router-outlet>
         </nz-content>

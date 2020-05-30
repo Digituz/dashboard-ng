@@ -6,7 +6,16 @@ import { ProductsComponent } from './products.component';
 import { Shell } from '@app/shell/shell.service';
 
 const routes: Routes = [
-  Shell.childRoutes([{ path: '', component: ProductsComponent, data: { title: extract('Products') } }]),
+  Shell.childRoutes([
+    {
+      path: '',
+      component: ProductsComponent,
+      data: {
+        title: extract('Products'),
+        breadcrumb: 'Produtos',
+      },
+    },
+  ]),
 ];
 
 @NgModule({

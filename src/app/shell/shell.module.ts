@@ -11,6 +11,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { I18nModule } from '@app/i18n';
 import { ShellComponent } from './shell.component';
 import { HeaderComponent } from './header/header.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 import { AppstoreOutline, UserOutline, LaptopOutline, NotificationOutline } from '@ant-design/icons-angular/icons';
 
@@ -27,6 +28,6 @@ const icons: IconDefinition[] = [AppstoreOutline, UserOutline, LaptopOutline, No
     NzMenuModule,
     NzIconModule.forRoot(icons),
   ],
-  declarations: [HeaderComponent, ShellComponent],
+  declarations: [BreadcrumbsComponent, HeaderComponent, ShellComponent],
 })
 export class ShellModule {}
