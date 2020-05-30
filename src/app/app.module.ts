@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { NgxsModule } from '@ngxs/store';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { environment } from '@env/environment';
@@ -21,6 +22,9 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxsModule.forRoot([], {
+      developmentMode: !environment.production,
+    }),
     TranslateModule.forRoot(),
     CoreModule,
     SharedModule,
