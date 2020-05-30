@@ -17,18 +17,18 @@
       <nz-layout class="inner-layout">
         <nz-breadcrumb>
           <nz-breadcrumb-item>
-            <a [title]="'Início'" [routerLink]="['/']">
+            <a [title]="'Início'" routerLink="/">
               Início
             </a>
           </nz-breadcrumb-item>
           <nz-breadcrumb-item>
-            <a [title]="'Produtos'" [routerLink]="['/produtos']">
+            <a [title]="'Produtos'" routerLink="/products">
               Produtos
             </a>
           </nz-breadcrumb-item>
         </nz-breadcrumb>
         <nz-content>
-          <h1>test</h1>
+          <router-outlet></router-outlet>
         </nz-content>
       </nz-layout>
     </nz-layout>
