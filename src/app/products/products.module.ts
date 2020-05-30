@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
@@ -10,6 +16,17 @@ import { ProductsListComponent } from './products-list/products-list.component';
 
 @NgModule({
   declarations: [ProductsComponent, ProductFormComponent, ProductsListComponent],
-  imports: [NzTableModule, CommonModule, ProductsRoutingModule, NzButtonModule],
+  imports: [
+    FormsModule,
+    NzCardModule,
+    NzDividerModule,
+    NzFormModule,
+    NzGridModule,
+    NzTableModule,
+    NzSwitchModule,
+    CommonModule,
+    ProductsRoutingModule,
+    NzButtonModule,
+  ],
 })
 export class ProductsModule {}

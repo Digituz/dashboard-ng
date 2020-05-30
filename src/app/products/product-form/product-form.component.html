@@ -1,1 +1,48 @@
-<p>product-form works!</p>
+<nz-card nzTitle="Edição de Produtos">
+  <p>Atualize os dados do seu produto no formulário abaixo.</p>
+  <nz-divider></nz-divider>
+  <form nz-form>
+    <div nz-row [nzGutter]="16">
+      <div nz-col class="gutter-row" [nzSpan]="12">
+        <nz-form-label nzFor="sku">SKU</nz-form-label>
+        <nz-form-control>
+          <input nz-input name="sku" id="sku" placeholder="SKU do produto" />
+        </nz-form-control>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="12">
+        <nz-form-label nzFor="productActive">Ativo</nz-form-label>
+        <nz-form-control>
+          <nz-switch name="productActive" id="productActive" [(ngModel)]="productActive"></nz-switch>
+        </nz-form-control>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="12">
+        <nz-form-label nzFor="title">Título</nz-form-label>
+        <nz-form-control>
+          <input nz-input name="title" id="title" placeholder="Título do produto" />
+        </nz-form-control>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="12">
+        <nz-form-label nzFor="seillingPrice">Preço de Venda</nz-form-label>
+        <nz-form-control>
+          <input nz-input name="seillingPrice" id="seillingPrice" placeholder="Preço de venda do produto" />
+        </nz-form-control>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-label nzFor="description">Descrição Curta</nz-form-label>
+        <nz-form-control>
+          <input nz-input name="description" id="description" placeholder="Descrição curta do produto" />
+        </nz-form-control>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-label nzFor="productDetails">Detalhamento</nz-form-label>
+        <nz-form-control>
+          <textarea id="productDetails" name="productDetails" nz-input [(ngModel)]="productDetails"></textarea>
+        </nz-form-control>
+      </div>
+      <div nz-col class="gutter-row form-actions" [nzSpan]="24">
+        <button nz-button nzType="primary">Salvar</button>
+        <button nz-button>Voltar</button>
+      </div>
+    </div>
+  </form>
+</nz-card>

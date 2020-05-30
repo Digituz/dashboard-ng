@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-form.component.scss'],
 })
 export class ProductFormComponent implements OnInit {
+  productActive: boolean = false;
+  productDetails: string = '';
+
   constructor() {}
 
   ngOnInit(): void {}
