@@ -2,3 +2,17 @@
  * Global application theme.
  * Framework overrides and customization goes here.
  */
+
+app-root,
+app-shell,
+app-header,
+header {
+  display: block;
+  height: 100%;
+}
+
+nz-layout.ant-layout {
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+}
