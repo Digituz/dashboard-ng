@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { extract } from '@app/i18n';
 import { ProductsComponent } from './products.component';
 import { Shell } from '@app/shell/shell.service';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductsListComponent } from './products-list/products-list.component';
 
 const routes: Routes = [
   Shell.childRoutes([
@@ -14,6 +16,24 @@ const routes: Routes = [
         title: extract('Products'),
         breadcrumb: 'Produtos',
       },
+      children: [
+        {
+          path: '',
+          component: ProductsListComponent,
+          data: {
+            title: 'Lista de Produtos',
+            breadcrumb: 'Lista',
+          },
+        },
+        {
+          path: ':id',
+          component: ProductFormComponent,
+          data: {
+            title: 'Editar Produto',
+            breadcrumb: 'Editar Produto',
+          },
+        },
+      ],
     },
   ]),
 ];

@@ -1,0 +1,21 @@
+<p>Controle os seus produtos de forma simplificada.</p>
+<nz-table #productsTable [nzData]="products">
+  <thead>
+    <tr>
+      <th>SKU</th>
+      <th>Título</th>
+      <th>Preço</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productsTable.data">
+      <td>{{ product.sku }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.sellingPrice }}</td>
+      <td>
+        <a [title]="'Início'" [routerLink]="'/products/' + product.id"><button nz-button>Editar</button></a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
