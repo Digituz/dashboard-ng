@@ -7,6 +7,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 
 import { ProductsRoutingModule } from './products-routing.module';
@@ -24,6 +25,7 @@ import { BreadcrumbsModule } from '@app/breadcrumbs/breadcrumbs.module';
     NzFormModule,
     NzGridModule,
     NzTableModule,
+    NzSkeletonModule,
     NzSwitchModule,
     CommonModule,
     ProductsRoutingModule,

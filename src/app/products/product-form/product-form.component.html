@@ -9,7 +9,8 @@
   </div>
 </div>
 <nz-card>
-  <form nz-form [formGroup]="formFields" (ngSubmit)="submitProductDetails()">
+  <nz-skeleton [nzActive]="true" *ngIf="loading"></nz-skeleton>
+  <form nz-form [formGroup]="formFields" (ngSubmit)="submitProductDetails()" *ngIf="!loading">
     <div nz-row [nzGutter]="16">
       <div nz-col class="gutter-row" [nzSpan]="12">
         <nz-form-label nzFor="sku">SKU</nz-form-label>
