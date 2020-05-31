@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { ProductsService } from '../products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-form',
@@ -16,12 +18,13 @@ export class ProductFormComponent implements OnInit {
     isActive: [false],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private productService: ProductsService, private router: Router) {}
 
   ngOnInit(): void {}
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.formFields.value);
+    this.productService.saveProduct(this.formFields.value).subscribe(() => {
+      this.router.navigate(['/products']);
+    });
   }
 }

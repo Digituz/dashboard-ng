@@ -14,4 +14,9 @@ export class ProductsService {
   public loadProducts(): Observable<Product[]> {
     return this.httpClient.get<Product[]>(this.PRODUCTS_ENDPOINT);
   }
+
+  public saveProduct(product: Product): Observable<void> {
+    const endpoint = product.id ? `${this.PRODUCTS_ENDPOINT}/${product.id}` : this.PRODUCTS_ENDPOINT;
+    return this.httpClient.post<void>(endpoint, product);
+  }
 }
