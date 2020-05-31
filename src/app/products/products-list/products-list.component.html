@@ -1,4 +1,12 @@
-<p>Controle os seus produtos de forma simplificada.</p>
+<div class="feature-header">
+  <h2>Lista de Produtos</h2>
+  <p>
+    <label>Controle os seus produtos de forma simplificada.</label>
+  </p>
+  <div class="actions">
+    <a title="Novo Produto" routerLink="/products/new"><button nz-button nzType="primary">Novo Produto</button></a>
+  </div>
+</div>
 <nz-table #productsTable [nzData]="products">
   <thead>
     <tr>

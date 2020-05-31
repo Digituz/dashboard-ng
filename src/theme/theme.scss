@@ -50,3 +50,32 @@ nz-form-control {
 .form-actions {
   padding: 0 16px !important;
 }
+
+.feature-header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 35px;
+  grid-template-areas:
+    "header header"
+    "description actions";
+  margin-bottom: 5px;
+
+  header {
+    grid-area: header;
+  }
+
+  p {
+    grid-area: description;
+    display: flex;
+    margin: 0;
+
+    label {
+      align-self: flex-end;
+    }
+  }
+
+  div {
+    grid-area: actions;
+    text-align: right;
+  }
+}
