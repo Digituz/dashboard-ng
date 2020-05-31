@@ -1,7 +1,15 @@
-<nz-card nzTitle="Edição de Produtos">
-  <p>Atualize os dados do seu produto no formulário abaixo.</p>
-  <nz-divider></nz-divider>
-  <form nz-form [formGroup]="formFields" (ngSubmit)="onSubmit()">
+<div class="feature-header">
+  <h2>Edição de Produtos</h2>
+  <p>
+    <label>Atualize os dados do seu produto no formulário abaixo.</label>
+  </p>
+  <div class="actions">
+    <a routerLink="/products"><button nz-button>Voltar</button></a>
+    <button nz-button nzType="primary" (click)="submitProductDetails()">Salvar</button>
+  </div>
+</div>
+<nz-card>
+  <form nz-form [formGroup]="formFields" (ngSubmit)="submitProductDetails()">
     <div nz-row [nzGutter]="16">
       <div nz-col class="gutter-row" [nzSpan]="12">
         <nz-form-label nzFor="sku">SKU</nz-form-label>
@@ -50,10 +58,6 @@
         <nz-form-control>
           <textarea id="productDetails" name="productDetails" formControlName="productDetails" nz-input></textarea>
         </nz-form-control>
-      </div>
-      <div nz-col class="gutter-row form-actions" [nzSpan]="24">
-        <button nz-button nzType="primary" type="submit" [disabled]="!formFields.valid">Salvar</button>
-        <button nz-button type="button">Voltar</button>
       </div>
     </div>
   </form>

@@ -22,7 +22,7 @@ export class ProductFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {
+  submitProductDetails() {
     this.productService.saveProduct(this.formFields.value).subscribe(() => {
       this.router.navigate(['/products']);
     });
