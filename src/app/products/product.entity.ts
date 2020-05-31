@@ -1,8 +1,9 @@
 export default class Product {
-  id: number;
-  sku: string;
-  title: string;
-  description: string;
-  sellingPrice: number;
-  isActive: boolean;
+  id?: number;
+  sku?: string;
+  title?: string;
+  description?: string;
+  productDetails?: string;
+  sellingPrice?: number;
+  isActive?: boolean;
 }

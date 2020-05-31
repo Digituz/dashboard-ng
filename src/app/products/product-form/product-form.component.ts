@@ -22,19 +22,28 @@ export class ProductFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const productId = this.route.snapshot.params.id;
+    const sku = this.route.snapshot.params.sku;
 
-    if (productId === 'new') {
-      this.formFields = this.fb.group({
-        sku: [''],
-        title: [''],
-        description: [''],
-        productDetails: [''],
-        sellingPrice: [null],
-        isActive: [false],
+    if (sku === 'new') {
+      this.product = {};
+      this.configureFormFields(this.product);
+    } else {
+      this.productService.loadProduct(sku).subscribe((product) => {
+        this.configureFormFields(product);
       });
-      this.loading = false;
     }
+  }
+
+  private configureFormFields(product: Product) {
+    this.formFields = this.fb.group({
+      sku: [product.sku || ''],
+      title: [product.title || ''],
+      description: [product.description || ''],
+      productDetails: [product.productDetails || ''],
+      sellingPrice: [product.sellingPrice || null],
+      isActive: [product.isActive || false],
+    });
+    this.loading = false;
   }
 
   submitProductDetails() {

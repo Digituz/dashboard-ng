@@ -26,7 +26,7 @@ const routes: Routes = [
           },
         },
         {
-          path: ':id',
+          path: ':sku',
           component: ProductFormComponent,
           data: {
             title: 'Editar Produto',
