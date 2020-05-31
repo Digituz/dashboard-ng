@@ -5,16 +5,10 @@ const routes: Routes = [
   {
     path: 'products',
     loadChildren: () => import('./products/products.module').then((m) => m.ProductsModule),
-    data: {
-      breadcrumb: 'Produtos',
-    },
   },
   {
     path: 'inventory',
     loadChildren: () => import('./inventory/inventory.module').then((m) => m.InventoryModule),
-    data: {
-      breadcrumb: 'Inventório',
-    },
   },
   // Fallback when no prior route is matched
   {

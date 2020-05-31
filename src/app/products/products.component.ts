@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreadcrumbsService } from '@app/breadcrumbs/breadcrumbs.service';
 
 @Component({
   selector: 'app-products',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  constructor() {}
+  constructor(private breadcrumbsService: BreadcrumbsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.breadcrumbsService.refreshBreadcrumbs([{ label: 'Produtos', url: '/products' }]);
+  }
 }

@@ -13,6 +13,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductsListComponent } from './products-list/products-list.component';
+import { BreadcrumbsModule } from '@app/breadcrumbs/breadcrumbs.module';
 
 @NgModule({
   declarations: [ProductsComponent, ProductFormComponent, ProductsListComponent],
@@ -27,6 +28,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
     CommonModule,
     ProductsRoutingModule,
     NzButtonModule,
+    BreadcrumbsModule,
   ],
 })
 export class ProductsModule {}
