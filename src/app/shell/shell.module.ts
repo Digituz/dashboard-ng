@@ -12,9 +12,23 @@ import { ShellComponent } from './shell.component';
 import { HeaderComponent } from './header/header.component';
 import { BreadcrumbsModule } from '../breadcrumbs/breadcrumbs.module';
 
-import { AppstoreOutline, UserOutline, LaptopOutline, NotificationOutline } from '@ant-design/icons-angular/icons';
+import {
+  GoldOutline,
+  DeploymentUnitOutline,
+  HomeOutline,
+  UserOutline,
+  LaptopOutline,
+  NotificationOutline,
+} from '@ant-design/icons-angular/icons';
 
-const icons: IconDefinition[] = [AppstoreOutline, UserOutline, LaptopOutline, NotificationOutline];
+const icons: IconDefinition[] = [
+  GoldOutline,
+  DeploymentUnitOutline,
+  HomeOutline,
+  UserOutline,
+  LaptopOutline,
+  NotificationOutline,
+];
 
 @NgModule({
   imports: [
